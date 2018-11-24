@@ -23,17 +23,4 @@ class PostController extends AbstractController
     }
 }
 
-{
-    /**
-     * @Route("/", name="post")
-     */
-    public function aboutAction()
-    {
 
-        $f="И тут будет описание";
-    return $this->render('post/about.html.twig', [
-        'controller_name' => 'PostController',
-        'description' => '$f',
-    ]);
-}
-}
