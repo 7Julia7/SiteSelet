@@ -12,15 +12,28 @@ class PostController extends AbstractController
      */
     public function indexAction()
     {
-        $a=2+2;
-        $b=2+2*2;
-        $c=$a*$b;
         return $this->render('post/index.html.twig', [
-            'controller_name' => 'PostController',
-            'hello' => 'Hello world',
-            'calculated' => $c,
+            'hello' => 'Привет',
+            'whatthere' => 'Здесь ты сможешь найти т.д'
+        ]);
+    }
+
+    /**
+     * @Route("/about", name="about")
+     */
+    public function aboutAction()
+    {
+        return $this->render('post/about.html.twig', [
+            'about' => 'бла бла бла'
+        ]);
+    }
+    /**
+     * @Route("/posts", name="posts")
+     */
+    public function postsAction()
+    {
+        return $this->render('post/posts.html.twig', [
+            'posts' => 'gfhruyfg'
         ]);
     }
 }
-
-
